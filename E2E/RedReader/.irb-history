@@ -1,3 +1,20 @@
 reinstall_apps
 start_test_server_in_background
-query("*")
+query("rr_actionbar_toolbar")
+query("* id:'rr_actionbar_toolbar'")
+query("* content-desc:'More options'")
+query("* id:'rr_actionbar_toolbar'")
+start_test_server_in_background
+query("* id:'rr_actionbar_toolbar'")
+query("* content-desc:'More options'")
+query("* class:'android.widget.ImageView'")
+start_test_server_in_background
+query("* class:'android.widget.ImageView'")
+query("android.widget.ImageView")
+senter$OverflowMenuButton'")
+reinstall_apps
+start_test_server_in_background
+query("* class:'android.support.v7.widget.ActionMenuPresenter$OverflowMenuButton'")
+query("* class:'android.support.v7.widget.ActionMenuPresenter'")
+query("* class:'android.widget.ImageView'")
+query("* contentDescription:'More options'")
