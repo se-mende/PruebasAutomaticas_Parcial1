@@ -6,9 +6,11 @@ var {expect} = require('chai');
 var baseUrl = 'https://todoist.com';
 var user = 'se-mende@uniandes.edu.co';
 var pw = 'Pruebas123';
+const screenshotsDir = './screenshots/';
 
 Given('I go to Todoist', () => {
     browser.url(baseUrl + '/Users/showLogin');
+    browser.saveScreenshot(screenshotsDir + 'login.png');
 });
 
 Given('I go to Todoist and authenticate', () => {
@@ -73,6 +75,7 @@ Then('I expect to enter the site', () => {
 When('I go to Today', () => {
     var todayLink = $('#filter_today > .item_content');
     browser.waitUntil(() => todayLink.isClickable());
+    browser.saveScreenshot(screenshotsDir + 'task.png');
     todayLink.click();
 });
 
@@ -124,6 +127,7 @@ Then('I expect to see the new task', () => {
 When('I click on config', () => {
     var configLink = $('#gear_holder');
     browser.waitUntil(() => configLink.isClickable());
+    browser.saveScreenshot(screenshotsDir + 'config.png');
     configLink.click();
 });
 
